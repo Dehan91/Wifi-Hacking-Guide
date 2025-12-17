@@ -1,0 +1,45 @@
+# Tools
+
+This section provides an overview of the tools commonly used in WiFi hacking. Each tool is described briefly, and links to more detailed information are provided.
+
+## Aircrack-ng
+
+**Aircrack-ng** is a comprehensive suite of tools for assessing WiFi network security. It includes utilities for capturing packets, injecting packets, and cracking WEP and WPA/WPA2 keys. Aircrack-ng is widely used by security professionals and enthusiasts alike for its powerful features and ease of use.
+
+- **Installation:** [Installation Guide](tools/aircrack-ng.md#installation)
+- **Basic Usage:** [Basic Usage](tools/aircrack-ng.md#basic-usage)
+- **Advanced Features:** [Advanced Features](tools/aircrack-ng.md#advanced-features)
+
+## Wifite
+
+**Wifite** is an automated wireless auditing tool that simplifies the process of WiFi hacking by automating the use of other tools like airodump-ng and aireplay-ng. It offers a user-friendly interface and is a popular choice for both beginners and experienced hackers.
+
+- **Installation:** [Installation Guide](tools/wifite.md#installation)
+- **Basic Usage:** [Basic Usage](tools/wifite.md#basic-usage)
+- **Advanced Options:** [Advanced Options](tools/wifite.md#advanced-options)
+
+## Reaver
+
+**Reaver** is a brute-force attack tool that targets WPS (WiFi Protected Setup) PINs to recover WPA/WPA2 passphrases. This tool is particularly effective against routers that support WPS, making it a valuable addition to any WiFi hacking arsenal.
+
+- **Installation:** [Installation Guide](tools/reaver.md#installation)
+- **Basic Usage:** [Basic Usage](tools/reaver.md#basic-usage)
+- **Advanced Techniques:** [Advanced Techniques](tools/reaver.md#advanced-techniques)
+
+## Fern Wifi Cracker
+
+**Fern Wifi Cracker** is a graphical tool that simplifies the process of cracking and recovering WEP, WPA, and WPS keys. It provides a user-friendly interface and supports a wide range of wireless network adapters.
+
+- **Installation:** [Installation Guide](tools/fern-wifi-cracker.md#installation)
+- **Basic Usage:** [Basic Usage](tools/fern-wifi-cracker.md#basic-usage)
+- **Advanced Features:** [Advanced Features](tools/fern-wifi-cracker.md#advanced-features)
+
+## netsniff-ng
+
+**netsniff-ng** is a versatile network toolkit that includes utilities for network packet sniffing, monitoring, and analysis. It is particularly useful for capturing and analyzing network traffic in WiFi networks.
+
+- **Installation:** [Installation Guide](tools/netsniff-ng.md#installation)
+- **Basic Usage:** [Basic Usage](tools/netsniff-ng.md#basic-usage)
+- **Advanced Options:** [Advanced Options](tools/netsniff-ng.md#advanced-options)
+
+For more detailed information on each tool, including step-by-step guides and examples, please refer to the respective markdown files in the `tools` directory.
