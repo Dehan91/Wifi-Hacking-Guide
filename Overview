@@ -1,0 +1,51 @@
+WiFi-Hacking-Guide
+Welcome to the WiFi-Hacking-Guide repository! This guide provides a comprehensive, step-by-step exploration of WiFi hacking techniques and the tools commonly used in the field. Whether you're a security professional looking to enhance your skills or an enthusiast eager to learn, this repository offers valuable insights and practical examples to help you understand and master WiFi security vulnerabilities.
+
+Table of Contents
+Introduction
+Tools
+Aircrack-ng
+Wifite
+Reaver
+Fern Wifi Cracker
+netsniff-ng
+Techniques
+WPS Brute Force Attack
+WPA Handshake Capture
+Examples and Use Cases
+Contributing
+License
+Introduction
+WiFi hacking is a critical aspect of network security, enabling professionals to identify and exploit vulnerabilities in wireless networks. This guide covers a range of techniques and tools that are essential for understanding and mitigating these risks. Whether you're targeting WEP, WPA, or WPA2 networks, this repository will provide you with the knowledge and practical skills to effectively conduct WiFi hacking.
+
+Tools
+Aircrack-ng
+Aircrack-ng is a powerful suite of tools for assessing WiFi network security. It includes utilities for capturing packets, injecting packets, and cracking WEP and WPA/WPA2 keys. This section provides an overview of its installation, basic usage, and advanced features.
+
+Wifite
+Wifite is an automated wireless auditing tool that simplifies the process of WiFi hacking by automating the use of other tools like airodump-ng and aireplay-ng. It offers a user-friendly interface and is a popular choice for both beginners and experienced hackers.
+
+Reaver
+Reaver is a brute-force attack tool that targets WPS (WiFi Protected Setup) PINs to recover WPA/WPA2 passphrases. This tool is particularly effective against routers that support WPS, making it a valuable addition to any WiFi hacking arsenal.
+
+Fern Wifi Cracker
+Fern Wifi Cracker is a graphical tool that simplifies the process of cracking and recovering WEP, WPA, and WPS keys. It provides a user-friendly interface and supports a wide range of wireless network adapters.
+
+netsniff-ng
+netsniff-ng is a versatile network toolkit that includes utilities for network packet sniffing, monitoring, and analysis. It is particularly useful for capturing and analyzing network traffic in WiFi networks.
+
+Techniques
+WPS Brute Force Attack
+This technique involves using Reaver to perform a brute-force attack on a WiFi network's WPS PIN. By exploiting vulnerabilities in the WPS protocol, attackers can recover the WPA/WPA2 passphrase, gaining access to the network.
+
+WPA Handshake Capture
+Capturing a WPA handshake is a crucial step in cracking WPA/WPA2 encrypted networks. This section details the process of capturing a four-way handshake using tools like airodump-ng and aircrack-ng, followed by cracking the captured handshake.
+
+Examples and Use Cases
+This section provides real-world scenarios and examples of how these tools and techniques can be applied. Whether you're conducting a penetration test or exploring network security, these examples offer practical insights into WiFi hacking.
+
+Contributing
+We encourage contributions from the community! If you have updates, new tools to add, or corrections to make, please feel free to submit a pull request. Check out the CONTRIBUTING.md file for guidelines on how to contribute.
+
+License
+This repository is licensed under the MIT License. See the LICENSE file for details.
